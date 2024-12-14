@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'OldEnglish'; /* Name your font family */
+    src: url('fonts/OldEnglishFive-axyVg.ttf'); /* Locate the .ttf file within your directory*/
+  }
+@font-face {
+    font-family: 'OldEnglishCool'; /* Name your font family */
+    src: url('fonts/OldeEnglishRegular-Zd2J.ttf'); /*fon Locate the .ttf file within your directory*/
+  }
+
+html{
+    font-size:14px;
+    font-family: 'Times New Roman', serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+a{
+    color: #00ffd0;
+    font-weight: bolder;
+    text-decoration: none;
+}
+a:hover{
+    color: #ffffff;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+h1{
+    font-size:19px;
+    font-weight: bolder;
+}
+.container{
+    margin: 20px;
+    padding: 20px;
+}
+header{
+    margin-inline: 10px;
+}
+footer{
+    margin-inline: 10px;
+}
+.brand{
+    font-size: 50px;
+    font-family: 'OldEnglish', sans-serif;
+    color: #00ffd5;
+}
+.subforum{
+    margin-top: 20px;
+
+}
+.subforum-title{
+    color: #ffffff;
+    background-color: #2c8987;
+    padding: 0.1px;
+    border-radius: 3px;
+    margin: 4px;
+    font-family: 'OldEnglish', sans-serif;
+}
+.subforum-row{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.forum-row{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+.subforum-column{
+    padding: 10px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: #123134;
+}
+.subforum-icon img{
+    max-width: 250px;
+    
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subforum-divider{
+    display: block;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, #000000, #00d5ff, #000000);
+}
