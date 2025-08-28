@@ -52,5 +52,7 @@ body {
         .business-card .qr-code img {
             width: 150px;
             height: 150px;
+			float: right;
         }
+
 		
