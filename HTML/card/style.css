@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'OldEnglish'; /* Name your font family */
+    src: url('OldeEnglishRegular-Zd2J.ttf'); /*fon Locate the .ttf file within your directory*/
+  }
+
+body {
+			background-color: #000000;
+			color: #ffffff;
+			font-family: 'OldEnglish', sans-serif;
+            margin: 
+            padding: 
+            display: 
+            justify-content: 
+            align-items: 
+            height: 
+            background-color: 
+        }
+        .business-card {
+            width: 
+            padding: 
+            background-color: 
+            border-radius: 
+            box-shadow: 
+            text-align: 
+        }
+        .business-card h1 {
+            font-size:70px;
+            margin-bottom: 
+            color: 
+        }
+        .business-card p {
+            font-size: 30px;
+            margin: 
+            color: 
+        }
+        .business-card a {
+            color: #ff0000;
+            text-decoration:
+        }
+        .business-card a:hover {
+            text-decoration: 
+			color: #ff66	00;
+        }
+        .business-card img {
+            width: 250px;
+            margin-top: 
+            border-radius: 
+        }
+        .business-card .qr-code {
+            margin-top: 
+        }
+        .business-card .qr-code img {
+            width: 150px;
+            height: 150px;
+        }
+		

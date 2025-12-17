@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Calculations</title>
+<script language="javascript">
+//create a function - "procedure" to calculate 
+//	simple interest.
+//This function has four parameters
+	function calculate()
+	{
+		var myNum = Math.floor(Math.random()*6)+1;
+		var myNum2 = Math.floor(Math.random()*6)+1;
+		var totalNum = myNum + myNum2;
+		var output = "";
+		output += "Your Number is " + myNum + "\n";
+		console.log(totalNum);
+		if(myNum == 7){
+			output += "my lucky number";
+			window.alert("lucky number");
+			console.log(myNum);
+		}
+		
+		document.outputForm.txaoutField.value = output;
+	}
+</script>
+
+</head>
+<body>
+<center>
+<h1>Calculations and Functions</h1>
+</br>
+</br>
+<form name="rollForm">
+
+<input type="button" name="btnCalculate" value="Calculate"
+		onclick="calculate()"/>
+</form>
+</br>
+<form name="outputForm">
+	<textarea name="txaoutField" id="outputField"
+		rows="20" cols="20"/>
+	</textarea>
+</form>
+</center>
+</body>
+</html>

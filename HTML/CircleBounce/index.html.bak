@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <title>Canvas Tag</title>
+ <link rel="stylesheet" href="style.css">
+ <script language="javascript">
+ var moveX = 10 *1;
+ var moveY = 10 *1;
+ var moveX2 = 10 *1;
+ var moveY2 = 10 *1;
+ var xCoord= Math.floor(Math.random()*150)*1;
+ var yCoord = Math.floor(Math.random()* 150)*1;
+ var xCoord2= Math.floor(Math.random()*150)*1;
+ var yCoord2 = Math.floor(Math.random()* 150)*1;2
+ var onOff = 0 * 1;
+
+ function init()
+ {
+ drawCircle();
+ }
+ function drawCircle()
+ {
+ //paint our canvas
+ var c = document.getElementById("myCanvas");
+ var ctx = c.getContext("2d");
+ //Paint our background color
+ ctx.fillStyle="#000000";
+ ctx.fillRect(0,0,500,200);
+ //draw the circle
+ ctx.fillStyle = "#0000FF";
+    ctx.beginPath();
+    ctx.arc(xCoord, yCoord, 15, 0, Math.PI * 2, true);
+    ctx.closePath();
+    ctx.fill();
+
+    // Draw second circle (green)
+    ctx.fillStyle = "#00FF00";
+    ctx.beginPath();
+    ctx.arc(xCoord2, yCoord2, 20, 0, Math.PI * 2, true);
+    ctx.closePath();
+    ctx.fill();
+ }
+
+ function Move()
+ {
+ //moves circle by changing x-coordinate of circle
+ xCoord += moveX;
+ yCoord += moveY;
+ 
+ xCoord2 += moveX2;
+ yCoord2 += moveY2;
+
+ if(xCoord > 495)
+ {
+ moveX *= -1;
+ moveY *= -1;
+ }
+ else if(xCoord < 0)
+ {
+ moveX *= -1;
+ moveY *= 1;
+ }
+ if(yCoord > 195)
+ {
+ moveX *= 1;
+ moveY *= -1;
+ }
+ else if(yCoord < 0)
+ {
+ moveX *= 1;
+ moveY *= -1;
+ }
+//////////////////////////////////////////////
+ if(xCoord2 > 495)
+ {
+ moveX2 *= 1;
+ moveY2 *= -1;
+ }
+ else if(xCoord2 < 0)
+ {
+ moveX2 *= -1;
+ moveY2 *= 1;
+ }
+ if(yCoord2 > 195)
+ {
+ moveX2 *= -1;
+ moveY2 *= -1;
+ }
+ else if(yCoord2 < 0)
+ {
+ moveX2 *= 1;
+ moveY2 *= -1;
+ }
+ 
+ if(xCoord >= (xCoord2-6) && xCoord <= (xCoord2+6) && xCoord >= (xCoord2-6) && xCoord <= (xCoord2+6)){
+	moveX *= -1;
+    moveY *= -1;
+	moveX2 *= -1;
+    moveY2 *= -1;
+ }
+ drawCircle();
+
+ }
+ function theTimer()
+ {
+	 if(onOff == false)
+	 {
+	 timer = setInterval("Move()",100);
+	 onOff = 1*1;
+	 }
+	 else if(onOff == true)
+	  {
+	 clearInterval(timer);
+	 onOff = 0 * 1;
+	 }
+ }
+
+ </script>
+ </head>
+ <body onload="init()">
+ <center>
+ <h1>Basic Animation</h1>
+ <br>
+ <br>
+ <canvas id="myCanvas" width="500" height="200"
+ style="border:2px solid rgb(195,195,195);">
+ Your browser does support the canvas element
+ </canvas>
+ <br>
+ <br>
+ <input type="button" name="Play" value="Move"
+ onclick="Move()"/>
+ <input type="button" name="auto" value="Auto Move"
+ onclick ="theTimer()"/>
+ </center>
+ </body>
+ </html>

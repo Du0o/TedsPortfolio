@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>Dice</title>
+<link rel="stylesheet" href="style.css">
+<script language="javascript">
+//create a function - "procedure" to calculate 
+//	simple interest.
+//This function has four parameters
+	var spins = 0;
+	var avarage = 0;
+	var total = 0;
+	var totalStr = "";
+	var roll2 = 0;
+	var roll3 = 0;
+	var roll4 = 0;
+	var roll5 = 0;
+	var roll6 = 0;
+	var roll7 = 0;
+	var roll8 = 0;
+	var roll9 = 0;
+	var roll10 = 0;
+	var roll11 = 0;
+	var roll12 = 0;
+	
+	function calculate()
+	{	
+		
+		
+		var myNum = Math.floor(Math.random()*6)+1;
+		var myNum2 = Math.floor(Math.random()*6)+1;
+		var totalNum = myNum + myNum2;
+		var output = "";
+		total += myNum + myNum2;
+		spins = spins + 1;
+		console.log("spin "+spins);
+		avarage = total / spins;
+		totalStr =(myNum+myNum2)+"\n"+totalStr;
+		output += "You got " + (myNum+myNum2) + "\n The avarage of all rolls is " + avarage +"\n"+
+		"2 has been rolled "+ roll2 + " times \n"+
+		"You have a " + (100*roll2/spins) + "% chance to roll a 2 \n"+
+		"3 has been rolled "+ roll3 + " times \n"+
+		"You have a " + (100*roll3/spins) + "% chance to roll a 3 \n"+
+		"4 has been rolled "+ roll4 + " times \n"+
+		"You have a " + (100*roll4/spins) + "% chance to roll a 4 \n"+
+		"5 has been rolled "+ roll5 + " times \n"+
+		"You have a " + (100*roll5/spins) + "% chance to roll a 5 \n"+
+		"6 has been rolled "+ roll6 + " times \n"+
+		"You have a " + (100*roll6/spins) + "% chance to roll a 6 \n"+
+		"7 has been rolled "+ roll7 + " times \n"+
+		"You have a " + (100*roll7/spins) + "% chance to roll a 7 \n"+
+		"8 has been rolled "+ roll8 + " times \n"+
+		"You have a " + (100*roll8/spins) + "% chance to roll a 8 \n"+
+		"9 has been rolled "+ roll9 + " times \n"+
+		"You have a " + (100*roll9/spins) + "% chance to roll a 9 \n"+
+		"10 has been rolled "+ roll10 + " times \n"+
+		"You have a " + (100*roll10/spins) + "% chance to roll a 10 \n"+
+		"11 has been rolled "+ roll11 + " times \n"+
+		"You have a " + (100*roll11/spins) + "% chance to roll a 11 \n"+
+		"12 has been rolled "+ roll12 + " times \n"+
+		"You have a " + (100*roll12/spins) + "% chance to roll a 12 \n";
+		
+		if(myNum == 1){
+			document.getElementById("dice1").src= "1.png";
+			console.log(myNum);
+		}
+		else if(myNum == 2){
+			document.getElementById("dice1").src= "2.png";
+			console.log(myNum);
+		}
+		else if(myNum == 3){
+			document.getElementById("dice1").src= "3.png";
+			console.log(myNum);
+		}
+		else if(myNum == 4){
+			document.getElementById("dice1").src= "4.png";
+			console.log(myNum);
+		}
+		else if(myNum == 5){
+			document.getElementById("dice1").src= "5.png";
+			console.log(myNum);
+		}
+		else if(myNum == 6){
+			document.getElementById("dice1").src= "6.png";
+			console.log(myNum);
+		}
+		if(myNum2 == 1){
+			document.getElementById("dice2").src= "1.png";
+			console.log(myNum);
+		}
+		else if(myNum2 == 2){
+			document.getElementById("dice2").src= "2.png";
+			console.log(myNum);
+		}
+		else if(myNum2 == 3){
+			document.getElementById("dice2").src= "3.png";
+			console.log(myNum);
+		}
+		else if(myNum2 == 4){
+			document.getElementById("dice2").src= "4.png";
+			console.log(myNum);
+		}
+		else if(myNum2 == 5){
+			document.getElementById("dice2").src= "5.png";
+			console.log(myNum);
+		}
+		else if(myNum2 == 6){
+			document.getElementById("dice2").src= "6.png";
+			console.log(myNum);
+		}
+		if ((myNum+myNum2) == 2){
+			roll2 += 1;
+		}
+		else if ((myNum+myNum2) == 3){
+			roll3 += 1;
+		}
+		else if ((myNum+myNum2) == 4){
+			roll4 += 1;
+		}
+		else if ((myNum+myNum2) == 5){
+			roll5 += 1;
+		}
+		else if ((myNum+myNum2) == 6){
+			roll6 += 1;
+		}
+		else if ((myNum+myNum2) == 7){
+			roll7 += 1;
+		}
+		else if ((myNum+myNum2) == 8){
+			roll8 += 1;
+		}
+		else if ((myNum+myNum2) == 9){
+			roll9 += 1;
+		}
+		else if ((myNum+myNum2) == 10){
+			roll10 += 1;
+		}
+		else if ((myNum+myNum2) == 11){
+			roll11 += 1;
+		}
+		else if ((myNum+myNum2) == 12){
+			roll12 += 1;
+		}
+		console.log(totalStr);
+		document.outputForm.txaoutField.value = output;
+		document.outputForm.sums.value = totalStr;
+		
+		
+		
+	}
+</script>
+
+</head>
+<body>
+<center>
+<h1>Dice</h1>
+</br>
+</br>
+
+	<div style="width:1000px;">
+				<div style="width:500px; float:left;">
+				<img id="dice1" src="6.png"></img>
+				</div>
+				<div style="width:500px; float:right;">
+				<img id="dice2" src="6.png"></img>
+				</div>
+	</div>
+<form name="rollForm">
+
+<input type="button" name="btnCalculate" value="Calculate"
+		onclick="calculate()"/>
+</form>
+</br>
+<form name="outputForm">
+	
+	<div style="width:1000px;">
+			<div style="width:500px; float:left;">
+				<textarea name="txaoutField" id="outputField"
+				rows="20" cols="20">
+				</textarea>
+			</div>
+			
+			<div style="width:500px; float:right;">
+				<textarea name="sums" id="outputField2"
+				rows="20" cols="20">
+				</textarea>
+			</div>
+	</div>
+</form>
+</center>
+</body>
+</html>

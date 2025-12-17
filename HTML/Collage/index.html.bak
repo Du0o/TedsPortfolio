@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collage - Theodore Todorov</title>
+</head>
+<body>
+	<div class="Bulgaria">
+		<img src="bulgaria.png" width=300px></img> 
+		<center><div class="text1">The flag bulgaria</div></center>
+	</div>
+	<div class="div2">
+		<img src="bulgaria.png" width=300px></img> 
+		<center><div class="text2">The flag bulgaria</div></center>
+	</div>
+	<div class="div3">
+		<img src="bulgaria.png" width=300px></img> 
+		<center><div class="text3">The flag bulgaria</div></center>
+	</div>
+	<div class="div4">
+		<img src="bulgaria.png" width=300px></img> 
+		<center><div class="text4">The flag bulgaria</div></center>
+	</div>
+	<div class="div5">
+		<img src="bulgaria.png" width=300px></img> 
+		<center><div class="text5">The flag bulgaria</div></center>
+	</div>
+	<div class="div6">
+		<img src="bulgaria.png" width=300px></img> 
+		<center><div class="text6">The flag bulgaria</div></center>
+	</div>
+	<div class="div7">
+		<img src="bulgaria.png" width=300px></img> 
+		<center><div class="text7">The flag bulgaria</div></center>
+	</div>
+	<div class="div8">
+		<img src="bulgaria.png" width=300px></img> 
+		<center><div class="text8">The flag bulgaria</div></center>
+	</div>
+	<div class="div9">
+		<img src="bulgaria.png" width=300px></img> 
+		<center><div class="text9">The flag bulgaria</div></center>
+	</div>
+	<div class="div10">
+		<img src="bulgaria.png" width=300px></img> 
+		<center><div class="text10">The flag bulgaria</div></center>
+	</div>
+	<div class="div11">
+		<img src="bulgaria.png" width=300px></img> 
+		<center><div class="text11">The flag bulgaria</div></center>
+	</div>
+	<div class="div12">
+		<img src="bulgaria.png" width=300px></img> 
+		<center><div class="text12">The flag bulgaria</div></center>
+	</div>
+	<div class="div13">
+		<img src="bulgaria.png" width=300px></img> 
+		<center><div class="text13">The flag bulgaria</div></center>
+	</div>
+	<div class="div14">
+		<img src="bulgaria.png" width=300px></img> 
+		<center><div class="text14">The flag bulgaria</div></center>
+	</div>
+	
+</body>
+</html>
