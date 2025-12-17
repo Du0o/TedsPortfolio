@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>Dice</title>
+<link rel="stylesheet" href="style.css">
+<script language="javascript">
+//create a function - "procedure" to calculate 
+//	simple interest.
+//This function has four parameters
+	var spins = 0;
+	var avarage = 0;
+	var total = 0;
+	var totalStr = "";
+	function calculate()
+	{
+		
+		
+		var myNum = Math.floor(Math.random()*6)+1;
+		var myNum2 = Math.floor(Math.random()*6)+1;
+		var totalNum = myNum + myNum2;
+		var output = "";
+		total += myNum + myNum2;
+		spins = spins + 1;
+		console.log("spin "+spins);
+		avarage = total / spins;
+		totalStr =(myNum+myNum2)+"\n"+totalStr;
+		output += "You got " + (myNum+myNum2) + "\n The avarage of all rolls is " + avarage +"\n";
+		if(myNum == 1){
+			document.getElementById("dice1").src= "1.png";
+			console.log(myNum);
+		}
+		else if(myNum == 2){
+			document.getElementById("dice1").src= "2.png";
+			console.log(myNum);
+		}
+		else if(myNum == 3){
+			document.getElementById("dice1").src= "3.png";
+			console.log(myNum);
+		}
+		else if(myNum == 4){
+			document.getElementById("dice1").src= "4.png";
+			console.log(myNum);
+		}
+		else if(myNum == 5){
+			document.getElementById("dice1").src= "5.png";
+			console.log(myNum);
+		}
+		else if(myNum == 6){
+			document.getElementById("dice1").src= "6.png";
+			console.log(myNum);
+		}
+		if(myNum2 == 1){
+			document.getElementById("dice2").src= "1.png";
+			console.log(myNum);
+		}
+		else if(myNum2 == 2){
+			document.getElementById("dice2").src= "2.png";
+			console.log(myNum);
+		}
+		else if(myNum2 == 3){
+			document.getElementById("dice2").src= "3.png";
+			console.log(myNum);
+		}
+		else if(myNum2 == 4){
+			document.getElementById("dice2").src= "4.png";
+			console.log(myNum);
+		}
+		else if(myNum2 == 5){
+			document.getElementById("dice2").src= "5.png";
+			console.log(myNum);
+		}
+		else if(myNum2 == 6){
+			document.getElementById("dice2").src= "6.png";
+			console.log(myNum);
+		}
+		console.log(totalStr);
+		document.outputForm.txaoutField.value = output;
+		document.outputForm.sums.value = totalStr;
+		
+	}
+</script>
+
+</head>
+<body>
+<center>
+<h1>Dice</h1>
+</br>
+</br>
+
+	<div style="width:1000px;">
+				<div style="width:500px; float:left;">
+				<img id="dice1" src="6.png"></img>
+				</div>
+				<div style="width:500px; float:right;">
+				<img id="dice2" src="6.png"></img>
+				</div>
+	</div>
+<form name="rollForm">
+
+<input type="button" name="btnCalculate" value="Calculate"
+		onclick="calculate()"/>
+</form>
+</br>
+<form name="outputForm">
+	
+	<div style="width:1000px;">
+			<div style="width:500px; float:left;">
+				<textarea name="txaoutField" id="outputField"
+				rows="20" cols="20">
+				</textarea>
+			</div>
+			
+			<div style="width:500px; float:right;">
+				<textarea name="sums" id="outputField2"
+				rows="20" cols="20">
+				</textarea>
+			</div>
+	</div>
+</form>
+</center>
+</body>
+</html>

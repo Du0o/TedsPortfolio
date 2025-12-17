@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchandise Store - Theodore Todorov</title>
+	<script language="javascript">
+	
+		var totalCustomers = 0 * 1;
+		var total = 0;
+		var disPer = 0;
+		var disPri = 0;
+		var totalOrder = 0;
+		var avarage = 0;
+		var output = "";
+		function calculate(nameString,streetString,cityString,stateString,zipString,piInt,zeroInt,thinkInt,hexInt)
+		{
+			var disPer = 0;
+			
+			var ele = document.getElementsByName('grade');
+ 
+            for (i = 0; i < ele.length; i++) {
+				if (ele[i].checked){
+					if(ele[i].value == "Other"){
+						disPer += 0;
+					}
+					else if(ele[i].value == "FS"){
+						disPer += 15;
+					}
+					else if(ele[i].value == "JS"){
+						disPer += 20;
+					}
+				}
+            }
+			
+			totalCustomers += 1;
+			total = 0;
+			total += piInt * 150;
+			total += zeroInt * 125;
+			total += thinkInt * 300;
+			total += hexInt * 25;
+			totalOrder += total;
+			disPri = ((100-disPer)/100)*total;
+			avarage = totalOrder/totalCustomers;
+			output = "Hi " + nameString + "\n Your Total is $" + total +"\n Yay you get a "+disPer+"% discount!"+"\n The discounted price is "+disPri+
+			"\nTotal Customers: " + totalCustomers + "\n The average order value is: "+avarage+"\nSending this to:\n" +
+			nameString + "\n" + streetString + "\n" + cityString + "\n" +
+			stateString + "\n" + zipString;
+		
+			document.getElementById("outputField").value = output;
+		}
+		
+		
+	</script>
+</head>
+<body>
+	<center>
+	<h1>Welcome To Ted's Tech Garage</h1>
+    <div class="page">
+        
+        <form name="nameForm">
+		<div style="width:600px;">
+			<div style="width:300px; float:left;">
+			Enter Name: 
+			<input type="text" name="txtName" value=""/></br>
+			</div>
+			<div style="width:300px; float:right;">
+			Enter Address: 
+			<input type="text" name="txtStreet" value=""/></br>
+			</div>
+		</div>
+		<div style="width:600px;">
+			<div style="width:300px; float:left;">
+			Enter City: 
+			<input type="text" name="txtCity" value=""/></br>
+			</div>
+			<div style="width:300px; float:right;">
+			Enter State: 
+			<input type="text" name="txtState" value=""/></br>
+			</div>
+			
+		</div>
+		<br>
+		<div style="clear: both;"></div>
+			
+			
+			Enter Zip Code: 
+			<input type="text" name="txtZip" value=""/></br>
+		
+		<br>
+		<br>
+		
+		<div style="width:800px;">
+			<div style="width:300px; float:left;">
+			<img src="pi.png"></img>
+			Razzberry Pi
+			<br>
+			$150
+			<br>
+			<input type="text" name="txtPi" value=""></br>
+			</div>
+			<div style="width:300px; float:right;">
+			<img src="thinkpad.png"></img>
+			Levono Thinkpad
+			<br>
+			$300
+			<br>
+			<input type="text" name="txtThink" value=""></br>
+			</div>
+		</div>
+		<div style="width:800px;">
+			<div style="width:300px; float:left;">
+			<img src="bitset.png" width="200px"></img>
+			<br>
+			Hex Bit Set
+			<br>
+			$25
+			<br>
+			<input type="text" name="txtHex" value=""></br>
+			</div>
+			<div style="width:300px; float:right;">
+			<center>
+			<img src="zero.png" height="200px"></img>
+			</center>
+			Flipper Zero
+			<br>
+			$125
+			<br>
+			<input type="text" name="txtFlip" value=""></br>
+			</div>
+		</div>
+		</form>
+		<div style="clear: both;"></div>
+		What grade are you in?
+		<br>
+		<input type="radio" name="grade" value="FS">Freshman/Sophmore</input>
+		<input type="radio" name="grade" value="JS">Junior/Senior</input>
+		<input type="radio" name="grade" value="Other">Other</input>	
+		<br>
+		<br>
+		Do you have a sibling in Gita?
+		<br>
+		<input type="checkbox" name="sibling" value="yes">yes</input>
+		<input type="checkbox" name="sibling" value="no">no</input>
+		<br>
+		<button type="button" onclick="calculate(
+		nameForm.txtName.value,
+		nameForm.txtStreet.value,
+		nameForm.txtCity.value,
+		nameForm.txtState.value,
+		nameForm.txtZip.value,
+		nameForm.txtPi.value,
+		nameForm.txtFlip.value,
+		nameForm.txtThink.value,
+		nameForm.txtHex.value
+		)">Place Order</button>
+		<form name="outputForm">
+			<textarea name="txaoutField" id="outputField"
+				rows="20" cols="20">
+				</textarea>
+		</form>
+    </div>
+</center>
+</body>
+</html>
