@@ -1,0 +1,24 @@
+html{
+    font-size:14px;
+    font-family: 'Times New Roman', serif;
+    background-color: #000000;
+    color: #ffffff;
+	
+	
+}
+h1{
+	background-color: #0000FF;
+	color: #ffff00;
+}
+a{
+	font-size:24px;
+	font-weight:bold;
+	color: #ffff00;
+}
+#sidenav{
+	height:700px;
+	width:180px;
+	background-color: #0000FF;
+	float:left;
+}
+
